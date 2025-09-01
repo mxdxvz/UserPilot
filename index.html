@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UserPilot</title>
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="logo-container">
+  <img src="logo.png" alt="UserFlow Logo" class="logo-img">
+  <div class="logo-text">UserPilot</div>
+</div>
+
+<div class="nav-links">
+  <a href="#manage" class="nav-link">Manage</a>
+  <a href="#add" class="nav-link">Add</a>
+  <a href="#fetch" class="nav-link">Fetch</a>
+  <a href="#update" class="nav-link">Update</a>
+</div>
+
+<div class="container">
+
+<section id="manage" class="section">
+  <h2><span class="manage-text">Manage</span> <span class="users-text">Users</span></h2>
+  <p>View all users or delete a user by ID.</p>
+  <button id="viewUsersBtn" class="view-users-btn">View All Users</button>
+
+  <div id="manageResult"></div>
+
+  <input type="text" id="deleteUserId" placeholder="Enter User ID to delete">
+  <button id="deleteUserBtn">Delete User</button>
+</section>
+
+  <!-- ADD USER -->
+  <section id="add" class="section">
+    <h2><span class="manage-text">Add</span> <span class="users-text">New Users</span></h2>
+    <p>Create new user accounts in the system.</p>
+    <input type="text" id="addUsername" placeholder="Username">
+    <input type="password" id="addPassword" placeholder="Password">
+    <button id="addUserBtn">Add User</button>
+    <div id="addMessage"></div>
+  </section>
+
+  <!-- FETCH USER -->
+  <section id="fetch" class="section">
+    <h2><span class="manage-text">Fetch</span> <span class="users-text">User</span></h2>
+    <p>Fetch user information by ID or code.</p>
+<input type="text" id="fetchIdentifier" placeholder="Enter User ID or Code">
+<button id="fetchUserBtn">Fetch User</button>
+<div id="fetchResult" style="display: none;"></div>
+
+    
+  </section>
+
+  <!-- UPDATE USER -->
+  <section id="update" class="section">
+    <h2><span class="manage-text">Update</span> <span class="users-text">User</span></h2>
+    <p>Update username or password of a user.</p>
+    <p>ID: <span id="updateUserId" class="highlight-id"></span></p>
+
+    <input type="text" id="updateUsername" placeholder="New Username">
+    <input type="password" id="updatePassword" placeholder="New Password">
+    <button id="updateUserBtn">Update User</button>
+    <div id="updateMessage"></div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+<footer id="footer">
+  Base URL: <a href="https://fordemo-ot4j.onrender.com/users" target="_blank">https://fordemo-ot4j.onrender.com/users</a>
+</footer>
+
+
+</body>
+</html>
